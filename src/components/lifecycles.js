@@ -1,6 +1,6 @@
-import React,{Component} from 'react';
+import React,{PureComponent} from 'react';
 
-class Life extends Component{
+class Life extends PureComponent{
   //1 get default props
 
   //2 set default state
@@ -9,40 +9,40 @@ class Life extends Component{
   }
 
   // 5 after render
-  componentDidMount(){
-    console.log('5 after render');
-    document.querySelector('h3').style.color='red'
-}
-  //3 before render
-  componentWillMount(){
-    console.log('3 before render');
-    //document.querySelector('h3').style.color='red' (it's not working, put to console, it will work)
-  }
+//   componentDidMount(){
+//     console.log('5 after render');
+//     document.querySelector('h3').style.color='red'
+// }
+//   //3 before render
+//   componentWillMount(){
+//     console.log('3 before render');
+//     //document.querySelector('h3').style.color='red' (it's not working, put to console, it will work)
+//   }
+//
+//   componentWillUpdate(){
+//     console.log('BEFORE UPDATE');
+//   }
+//
+//   componentDidUpdate(){
+//     console.log('AFTER UPDATE');
+//   }
 
-  componentWillUpdate(){
-    console.log('BEFORE UPDATE');
-  }
+  // shouldComponentUpdate(nextProps, nextState){
+  //   //console.log(this.state.title);
+  //   //console.log(nextState.title);
+  //   if (nextState.title === 'this.state.title'){
+  //     return false
+  //   }
+  //   return true;
+  // }
 
-  componentDidUpdate(){
-    console.log('AFTER UPDATE');
-  }
-
-  shouldComponentUpdate(nextProps, nextState){
-    //console.log(this.state.title);
-    //console.log(nextState.title);
-    if (nextState.title === 'something else'){
-      return false
-    }
-    return true;
-  }
-
-  componentWillReceiveProps(){
-    console.log('BEFORE RECEIVE PROPS');
-  }
-
-  componentWillUnmount(){
-    console.log('UNMOUNT');
-  }
+  // componentWillReceiveProps(){
+  //   console.log('BEFORE RECEIVE PROPS');
+  // }
+  //
+  // componentWillUnmount(){
+  //   console.log('UNMOUNT');
+  // }
 
   //4 render jxs
 
@@ -54,7 +54,7 @@ class Life extends Component{
       <h3>{this.state.title}</h3>
       <div onClick={
           ()=> this.setState({
-            title:'something elses'
+            title:'something else'
           })}
           >CLICK TO CHANGE</div>
         </div>
