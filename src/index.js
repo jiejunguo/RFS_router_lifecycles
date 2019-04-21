@@ -25,7 +25,7 @@ const App = () =>{
             activrStyle={{color:'red'}}
             activeClassName= "selected"
             >Posts</NavLink><br/>
-          <NavLink to={{pathname:'/profile'}}>Profile</NavLink><br/>
+          <NavLink to="/profile">Profile</NavLink><br/>
           <NavLink to="/life">Life</NavLink><br/>
           <NavLink to="/conditional">Conditional</NavLink><br/>
           <hr/>
